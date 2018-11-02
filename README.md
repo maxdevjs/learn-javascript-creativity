@@ -7,4 +7,5 @@ Here I will mainly play with codes and refurbish it to more up to date
 conventions.
 
 [JavaScript Creativity on Apress](https://www.apress.com/br/book/9781430259442)
+
 [Original code](http://www.shanehudson.net/javascript-creativity)
