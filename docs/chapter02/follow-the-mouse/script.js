@@ -1,14 +1,17 @@
 const canvas = document.getElementById('animation');
 const ctx = canvas.getContext('2d');
 
-const width = (height = 50);
-let startX = (startY = 10);
-let x = (y = startX);
+const width = 50;
+const height = 50;
+let startX = 10;
+let startY = 10;
+let x = startX;
+let y = startY;
 let duration = 0;
 // const endX = canvas.width - width;
 let endX;
 let endY;
-
+// endX = canvas.width - 50;
 const lerp = (start, end, speed) => start + (end - start) * speed;
 
 const logic = evt => {
@@ -18,7 +21,7 @@ const logic = evt => {
   let l = lerp(startX, endX, duration);
   let ll = lerp(startY, endY, duration);
   // x = lerp(startX, endX, duration);
-  if (l < max && l > 0 && endX !== x && (l < maxY && ll > 0 && endY !== y)) {
+  if (l < max && l > 0 && endX !== x && (ll < maxY && ll > 0 && endY !== y)) {
     x = l;
     y = ll;
     requestAnimationFrame(draw);
@@ -29,9 +32,11 @@ const logic = evt => {
 
 const draw = () => {
   //https://stackoverflow.com/questions/1664785/resize-html5-canvas-to-fit-window
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // canvas.width = window.innerWidth;
+  // canvas.height = window.innerHeight;
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#00FF00';
+  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
   ctx.fillStyle = '#FF0000';
   ctx.fillRect(x, y, width, height);
 };
