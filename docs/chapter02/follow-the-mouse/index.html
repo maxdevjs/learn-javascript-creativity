@@ -2,26 +2,29 @@
 <html>
   <head>
     <title>Chapter 2 - Basics of Canvas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../../styles.css" media="screen">
   </head>
   <body>
-    <canvas id="animation">
-    <p>Fallback not supported.</p>
-    </canvas>
-    <section>
-      <p>The example in the book uses a linear interpolation to follow the mouse:</p>
-      <code>n = start + (end - start) * speed</code>
-      <p>
-      <p>Also, adds an <em>EventListener</em> listening for the <em>mousemove</em> event.</p>
-        Still very rudimental (of course) experiment to follow the mouse on the <em>y</em> coordinates too.
-      </p>
-      <p>To check</p>
-      <ul>
-        <li>
-          looks like using <em>center</em> tag around a canvas breaks the follow behavior (perhaps the animation happens in original position, now out of canvas)</li>
-      </ul>
-    </section>
+    <main>
+      <section id="content">
+        <canvas id="animation">
+          <p>Fallback not supported.</p>
+        </canvas>
+        <section>
+          <p>The example in the book uses a linear interpolation to follow the mouse:</p>
+          <code>n = start + (end - start) * speed</code>
+          <p>
+          <p>Also, adds an <em>EventListener</em> listening for the <em>mousemove</em> event.</p>
+            Still very rudimental (of course) experiment to follow the mouse on the <em>y</em> coordinates too.
+          </p>
+          <p>To check</p>
+          <ul>
+            <li>
+              looks like using <em>center</em> tag around a canvas breaks the follow behavior (perhaps the animation happens in original position, now out of canvas)</li>
+          </ul>
+        </section>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

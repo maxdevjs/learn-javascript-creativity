@@ -2,37 +2,40 @@
 <html>
   <head>
     <title>Chapter 2 - Basics of Canvas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../../styles.css" media="screen">
   </head>
   <body>
-    <canvas id="animation">
-    <p>Fallback not supported.</p>
-    </canvas>
-    <section>
-      <p>This is a bouncing box example.</p>
-      <p>There is a bit of trigonometry involved to take an angle (it will begin as a
-random angle under 360 degrees) and to find the desired position (heading of box).</p>
-      <p>
-        <code>
-          const degreesToRadians = degrees => degrees * (Math.PI / 180);
-        </code>
-      </p>
-      <p>
-        <code>
-          const dir_x = (length, angle) => length * Math.cos(degreesToRadians(angle));
-        </code>
-      </p>
-      <p>
-        <code>
-          const dir_y = (length, angle) => length * Math.sin(degreesToRadians(angle));
-        </code>
-      </p>  
-      <p><em>duration</em> is zeroed when equal to <em>10.</em></p>
-      <ul>
-        <li></li>
-      </ul>
-    </section>
+    <main>
+      <section id="content">
+        <canvas id="animation">
+          <p>Fallback not supported.</p>
+        </canvas>
+        <section>
+          <p>This is a bouncing box example.</p>
+          <p>There is a bit of trigonometry involved to take an angle (it will begin as a
+    random angle under 360 degrees) and to find the desired position (heading of box).</p>
+          <p>
+            <code>
+              const degreesToRadians = degrees => degrees * (Math.PI / 180);
+            </code>
+          </p>
+          <p>
+            <code>
+              const dir_x = (length, angle) => length * Math.cos(degreesToRadians(angle));
+            </code>
+          </p>
+          <p>
+            <code>
+              const dir_y = (length, angle) => length * Math.sin(degreesToRadians(angle));
+            </code>
+          </p>  
+          <p><em>duration</em> is zeroed when equal to <em>10.</em></p>
+          <ul>
+            <li></li>
+          </ul>
+        </section>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
